@@ -1,12 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import './components/NavBar'
-
 
 function App() {
   return (
     <div className="App">
-      <h1>wahteveranother one</h1>
+      <h1>wahtever</h1>
       {/* <Parallex />
       <Description />
       <Services />
