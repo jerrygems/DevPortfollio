@@ -6,7 +6,7 @@ import './components/NavBar'
 function App() {
   return (
     <div className="App">
-      <h1>wahtever</h1>
+      <h1>wahteveranother one</h1>
       {/* <Parallex />
       <Description />
       <Services />
