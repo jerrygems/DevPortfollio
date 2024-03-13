@@ -1,7 +1,6 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function NavBar() {
+function NavBar() {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
