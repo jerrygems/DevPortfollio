@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../NavBar";
-import Home from "../../pages/home/Home";
+
 // import myImage from "../../assets/myImage.jpg"; // Import your image here
 import "./layouts.css";
 
@@ -28,7 +28,6 @@ const Layout = () => {
       <div>
         <Skills />
       </div>
-      <Home />
     </>
   );
 };

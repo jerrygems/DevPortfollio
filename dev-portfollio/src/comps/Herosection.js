@@ -13,10 +13,10 @@ const HeroSection = () => {
 
       <div className="hero-content">
         <div className="hero-text">
-          <h1>Make Designs That Engage, Delight, and Connect</h1>
+          <h1>hi, i'm the anupam kumar</h1>
           <p>
-            Hi, I'm Travis! With more than 10 years of experience, I'm ready to
-            be a part of your wonderful project!
+            i'm good for nothing i'm even broke. you can heal me by clicking on
+            "hire me"
           </p>
           <button className="hire-btn">Hire Me</button>
           <button className="previous-works-btn">Previous Works</button>
