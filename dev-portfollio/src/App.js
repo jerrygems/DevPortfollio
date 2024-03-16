@@ -1,12 +1,13 @@
-import './App.css';
-import NavBar from './comps/NavBar';
+import "./App.css";
 
+import Layout from "./comps/layout/Layout";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar/>
-    </div>
+    <>
+      <Layout />
+      <h1 className=""> hi hello</h1>
+    </>
   );
 }
 
