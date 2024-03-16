@@ -5,6 +5,10 @@ import Home from "../../pages/home/Home";
 import "./layouts.css";
 
 import Button from "@mui/material/Button";
+import HeroSection from "../Herosection";
+import Services from "../../pages/home/Services";
+import Projects from "../../pages/home/Projects";
+import Skills from "../../pages/home/Skills";
 
 const Layout = () => {
   return (
@@ -12,14 +16,17 @@ const Layout = () => {
       <div className="nav">
         <NavBar />
       </div>
-      <div className="title">
-        <pre>
-          <h1>hi, i'm anupam and i'm good for nothing </h1>
-          <Button variant="contained">hire me</Button>
-        </pre>
-        <div className="title_img">
-          {/* <img src={myImage} alt="My Image" /> */}
-        </div>
+      <div>
+        <HeroSection />
+      </div>
+      <div>
+        <Services />
+      </div>
+      <div>
+        <Projects />
+      </div>
+      <div>
+        <Skills />
       </div>
       <Home />
     </>
