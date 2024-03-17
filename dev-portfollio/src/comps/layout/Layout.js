@@ -9,6 +9,7 @@ import HeroSection from "../Herosection";
 import Services from "../../pages/home/Services";
 import Projects from "../../pages/home/Projects";
 import Skills from "../../pages/home/Skills";
+import ContactMe from "../../pages/home/Contect";
 
 const Layout = () => {
   return (
@@ -27,6 +28,9 @@ const Layout = () => {
       </div>
       <div>
         <Skills />
+      </div>
+      <div>
+        <ContactMe />
       </div>
     </>
   );

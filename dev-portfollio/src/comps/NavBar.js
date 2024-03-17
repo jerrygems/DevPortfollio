@@ -1,156 +1,87 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+// import React from "react";
+import React, { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-function NavBar() {
-  // const [anchorElNav, setAnchorElNav] = React.useState < null | HTMLElement > (null);
-  // const [anchorElUser, setAnchorElUser] = React.useState < null | HTMLElement > (null);
-  // const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-  //   setAnchorElNav(event.currentTarget);
-  // };
-  // const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
-
-  // const handleCloseNavMenu = () => {
-  //   setAnchorElNav(null);
-  // };
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
-  return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              // anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              // open={Boolean(anchorElNav)}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} >
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              // anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              // open={Boolean(anchorElUser)}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+const NavBar = () => {
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode")
+      ? localStorage.getItem("darkMode")
+      : "light"
   );
-}
+  const toggle = () => {
+    if (darkMode === "dark") {
+      setDarkMode("light");
+    } else {
+      setDarkMode("dark");
+    }
+  };
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+    const localtheme = localStorage.getItem("darkMode");
+    document.querySelector("html").setAttribute("data-theme", localtheme);
+  }, [darkMode]);
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-lg bg-white/30 py-4 px-8">
+      <div className="flex items-center justify-between">
+        <div className="text-2xl font-bold text-gray-800">Anupam</div>
+        <ul className="flex space-x-4 text-gray-800">
+          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
+            About
+          </li>
+          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
+            Service
+          </li>
+          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
+            Skills
+          </li>
+          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
+            Projects
+          </li>
+          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
+            Contact
+          </li>
+        </ul>
+        <div className="flex space-x-4">
+          <a
+            href="https://github.com/theanupamkumar1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-github text-gray-800 hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer"></i>
+          </a>
+          <a
+            href="https://twitter.com/the_anupamkumar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-twitter text-gray-800 hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer"></i>
+          </a>
+          <a
+            href="https://instagram.com/the_anupam_kumar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-instagram text-gray-800 hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/theanupamkumar1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin text-gray-800 hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer"></i>
+          </a>
+        </div>
+
+        <button
+          className="ml-4 bg-gray-800 text-white rounded px-2 py-1"
+          onClick={toggle}
+        >
+          Dark Mode
+        </button>
+      </div>
+    </nav>
+  );
+};
+
 export default NavBar;
