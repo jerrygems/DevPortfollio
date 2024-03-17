@@ -8,12 +8,7 @@
   
 } */
 
-.hero-section {
-    background-color: #f3f4f6;
-    padding: 2rem 0;
-    width: 100vw;
-    height: 100vh;
-  }
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,7 +27,7 @@ body {
   
   .social-icons i {
     margin-left: 0.5rem;
-    color: #b226ff;
+    color: #7b61ff;
   }
   
   /* Hero Content */
@@ -70,9 +65,8 @@ body {
   }
   
   .hire-btn {
-    background-color: #b226ff;
+    background-color: #7b61ff;
     color: #fff;
-    font-weight: 500;
   }
   
   .previous-works-btn {
@@ -89,15 +83,17 @@ body {
     height: auto;
   }
   
-  /* .stats {
+  .stats {
     display: flex;
     justify-content: space-around;
-    position:  absolute;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
     background-color: #fff;
     padding: 1rem;
-    top:50% ;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  } */
+  }
   
   .stat {
     text-align: center;
@@ -106,7 +102,7 @@ body {
   .stat-value {
     font-size: 2rem;
     font-weight: bold;
-    color: #b226ff;
+    color: #7b61ff;
   }
   
   .stat-label {

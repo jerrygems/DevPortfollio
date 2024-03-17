@@ -1,64 +1,60 @@
 import React from "react";
 
-const Services = () => (
-  <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-    <div className="max-w-4xl mx-auto py-16">
-      <h2 className="text-5xl font-bold mb-8 text-center ">Our Services</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-w-screen">
-        <div className="relative bg-pink-500 text-white p-8 rounded-lg hover:bg-pink-700 opacity-100 transition-colors duration-200">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-50 hover:opacity-0 transition-opacity duration-200 "
-            style={{ backgroundImage: "url('../../discord-clone.png')" }}
-          ></div>
-          <div className="relative">
+const Services = () => {
+  return (
+    <div className="bg-gray-100 py-16 w-screen h-screen flex items-center justify-center ">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8">Services</h2>
+        <p className="text-gray-600 text-center mb-12">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
+          omnis iste natur
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="bg-blue-500 text-white p-8 rounded-lg">
             <div className="flex items-center justify-center mb-4">
               <i className="fas fa-mobile-alt fa-2x"></i>
             </div>
-            <h3 className="text-xl font-bold mb-2">Finetuning Models</h3>
+            <h3 className="text-xl font-bold mb-2">UX Research</h3>
             <p className="text-sm">
-              Finetuning models and making models for specialized tasks
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat
             </p>
           </div>
-        </div>
-        <div className="relative bg-green-500 text-white p-8 rounded-lg">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-50 hover:opacity-0 transition-opacity duration-200 "
-            style={{ backgroundImage: "url('../../discord-clone.png')" }}
-          ></div>
-          <div className="relative">
+          <div className="bg-yellow-500 text-white p-8 rounded-lg">
+            <div className="flex items-center justify-center mb-4">
+              <i className="fas fa-code fa-2x"></i>
+            </div>
+            <h3 className="text-xl font-bold mb-2">Web Development</h3>
+            <p className="text-sm">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat
+            </p>
+          </div>
+          <div className="bg-pink-500 text-white p-8 rounded-lg">
+            <div className="flex items-center justify-center mb-4">
+              <i className="fas fa-mobile-alt fa-2x"></i>
+            </div>
+            <h3 className="text-xl font-bold mb-2">App Design</h3>
+            <p className="text-sm">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat
+            </p>
+          </div>
+          <div className="bg-green-500 text-white p-8 rounded-lg">
             <div className="flex items-center justify-center mb-4">
               <i className="fas fa-globe fa-2x"></i>
             </div>
             <h3 className="text-xl font-bold mb-2">Web Design</h3>
             <p className="text-sm">
-              create stunning website, with MERN and no code platforms
+              Duis aute irure dolor in reprehenderit in voluptate velitesse
+              cillum dolore eu fugiat
             </p>
           </div>
         </div>
-
-        <div className="relative bg-yellow-500 text-white p-8 rounded-lg">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-50 hover:opacity-0 transition-opacity duration-200 "
-            style={{ backgroundImage: "url('../../discord-clone.png')" }}
-          ></div>
-          <div className="relative">
-            <div className="flex items-center justify-center mb-4">
-              <i className="fas fa-globe fa-2x"></i>
-            </div>
-            <h3 className="text-xl font-bold mb-2">Data Analysis</h3>
-            <p className="text-sm">
-              data analysis, prediction, decision making
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center mt-20">
-        <button className="bg-purple-500 hover:bg-gray-700 text-white font-bold py-2 px-4  rounded">
-          Contact Now
-        </button>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Services;

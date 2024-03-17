@@ -27,20 +27,16 @@ const skills = {
 const Skills = () => (
   <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
     <div className="max-w-4xl mx-auto py-16">
-      <h2 className="text-5xl font-bold mb-8 text-center ">My Skills</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center ">What I know</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 min-w-screen">
         {Object.entries(skills).map(([category, techs]) => (
           <div key={category} className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-lg font-bold mb-4 text-white">{category}</h3>
             <div className="flex flex-wrap">
-              {techs.map((tech, index) => (
+              {techs.map((tech) => (
                 <span
                   key={tech}
-                  className={`bg-gray-700 text-gray-300 py-1 px-2 mr-2 mb-2 rounded-md ${
-                    index % 2 !== 0
-                      ? "border border-purple"
-                      : "border border-skyblue"
-                  }`}
+                  className="bg-gray-700 text-gray-300 py-1 px-2 mr-2 mb-2 rounded-md"
                 >
                   {tech}
                 </span>
@@ -49,18 +45,7 @@ const Skills = () => (
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-20 ">
-        <a
-          href="https://drive.google.com/file/d/1QA9II1CJWg-1BkTI33ZD4lNZf3SGxvv0/view?usp=drive_link"
-          download
-          className="bg-purple-500 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded"
-          target="_blank"
-        >
-          Download Resume <i class="fas fa-download mr-2"></i>
-        </a>
-      </div>
     </div>
-    <hr className="border-t-2 border-gray-300 my-8 w-full" />
   </div>
 );
 

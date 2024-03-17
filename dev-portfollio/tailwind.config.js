@@ -4,23 +4,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"), require("tailwind-scrollbar")],
+  plugins: [require("daisyui")],
   daisyui: {
     themes: ["light", "dark", "cupcake"],
-  },
-  theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      white: "#ffffff",
-      purple: "#b226ff",
-      midnight: "#121063",
-      metal: "#565584",
-      tahiti: "#3ab7bf",
-      silver: "#ecebff",
-      "bubble-gum": "#ff77e9",
-      bermuda: "#78dcca",
-      skyblue: "#28cbfd",
-    },
   },
 };
