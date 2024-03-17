@@ -8,12 +8,12 @@
   
 } */
 
-.hero-section {
+/* .hero-section {
     background-color: #f3f4f6;
     padding: 2rem 0;
     width: 100vw;
     height: 100vh;
-  }
+  } */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -50,7 +50,7 @@ body {
   .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #333;
+    
   }
   
   .hero-text p {

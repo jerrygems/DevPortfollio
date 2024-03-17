@@ -42,9 +42,11 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="bg-gray-300 text-white py-16">
+    <div className=" text-white py-16">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-4 text-gray-700">Get in Touch</h2>
+        <h2 id="contact" className="text-3xl font-bold mb-4 text-gray-700">
+          Get in Touch
+        </h2>
         <div className="h-1 bg-purple-500 mb-8"></div>
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 mb-8 md:mb-0">

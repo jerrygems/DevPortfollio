@@ -1,6 +1,9 @@
 // import React from "react";
 import React, { useState, useEffect } from "react";
 // import { useState, useEffect } from "react";
+import Layout from "./layout/Layout";
+import Project from "../pages/home/Projects";
+import "./layout/darkmode.css";
 
 const NavBar = () => {
   const [darkMode, setDarkMode] = useState(
@@ -22,24 +25,73 @@ const NavBar = () => {
   }, [darkMode]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-lg bg-white/30 py-4 px-8">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-lg bg-white/30 py-4 px-8 ${
+        darkMode === "dark" ? "dark-mode" : ""
+      }`}
+    >
       <div className="flex items-center justify-between">
         <div className="text-2xl font-bold text-gray-800">Anupam</div>
         <ul className="flex space-x-4 text-gray-800">
-          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
-            About
+          <li>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("about")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer"
+            >
+              About
+            </button>
           </li>
-          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
-            Service
+          <li>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("skills")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer"
+            >
+              Skills
+            </button>
           </li>
-          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
-            Skills
+          <li>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("project")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer"
+            >
+              Project
+            </button>
           </li>
-          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
-            Projects
+          <li>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("services")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer"
+            >
+              Services
+            </button>
           </li>
-          <li className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer">
-            Contact
+          <li>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="hover:text-purple-600 text-gray-800 hover:text-purple-600 transition duration-300 cursor-pointer"
+            >
+              Contact
+            </button>
           </li>
         </ul>
         <div className="flex space-x-4">

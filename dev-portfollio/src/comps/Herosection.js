@@ -1,9 +1,13 @@
 import React from "react";
 import "./herosection.css";
+import "./layout/darkmode.css";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section flex flex-col h-screen w-screen mt-[80px]  overflow-hidden">
+    <div
+      id="about"
+      className="hero-section flex flex-col h-screen w-screen mt-[80px]  overflow-hidden"
+    >
       <div className="hero-content md:w-full md:w-1/2 ml-[40px]">
         <div className="hero-text">
           <h1 className="font-bold">I'm Anupam Kumar </h1>

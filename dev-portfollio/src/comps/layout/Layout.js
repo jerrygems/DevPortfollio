@@ -9,7 +9,7 @@ import HeroSection from "../Herosection";
 import Services from "../../pages/home/Services";
 import Projects from "../../pages/home/Projects";
 import Skills from "../../pages/home/Skills";
-import ContactMe from "../../pages/home/Contect";
+import ContactMe from "../../pages/home/Contact";
 
 const Layout = () => {
   return (

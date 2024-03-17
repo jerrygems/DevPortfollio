@@ -1,4 +1,5 @@
 import React from "react";
+import "../../comps/layout/darkmode.css";
 
 // Sample project data
 const projects = [
@@ -168,8 +169,11 @@ const ProjectCard = ({ project }) => (
 
 const Project = () => (
   <>
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h2 className="absolute top-10 text-5xl font-bold text-center mb-8 text-black">
+    <div
+      id="project"
+      className=" relative flex flex-col items-center justify-center min-h-screen "
+    >
+      <h2 className="absolute top-20 text-5xl font-bold text-center mb-8 ">
         Projects
       </h2>
       <div className="overflow-x-auto flex gap-4 py-8 px-4 scrollbar scrollbar-thumb-blue-500 ">
