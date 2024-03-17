@@ -20,14 +20,15 @@ const Layout = () => {
       <div>
         <HeroSection />
       </div>
-      <div>
-        <Services />
-      </div>
+
       <div>
         <Projects />
       </div>
       <div>
         <Skills />
+      </div>
+      <div>
+        <Services />
       </div>
       <div>
         <ContactMe />
