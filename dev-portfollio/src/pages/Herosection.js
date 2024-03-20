@@ -1,6 +1,6 @@
 import React from "react";
 import "./herosection.css";
-import "./layout/darkmode.css";
+import "../../src/comps/layout/darkmode.css";
 
 const HeroSection = () => {
   return (

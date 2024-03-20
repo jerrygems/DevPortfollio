@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./layout/darkmode.css";
+import "./darkmode.css";
 
 const NavBar = () => {
   const [darkMode, setDarkMode] = useState(

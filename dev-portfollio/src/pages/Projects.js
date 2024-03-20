@@ -1,5 +1,5 @@
 import React from "react";
-import "../../comps/layout/darkmode.css";
+// import "../../comps/layout/darkmode.css";
 
 // Sample project data
 const projects = [

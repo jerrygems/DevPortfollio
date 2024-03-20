@@ -1,15 +1,15 @@
 import React from "react";
-import NavBar from "../NavBar";
+import NavBar from "../../comps/layout/NavBar";
 
 // import myImage from "../../assets/myImage.jpg"; // Import your image here
 import "./layouts.css";
+import "./darkmode.css";
 
-import Button from "@mui/material/Button";
-import HeroSection from "../Herosection";
-import Services from "../../pages/home/Services";
-import Projects from "../../pages/home/Projects";
-import Skills from "../../pages/home/Skills";
-import ContactMe from "../../pages/home/Contact";
+import HeroSection from "../../pages/Herosection";
+import Projects from "../../pages/Projects";
+import Skills from "../../pages/Skills";
+import Services from "../../pages/Services";
+import ContactMe from "../../pages/Contact";
 
 const Layout = () => {
   return (
