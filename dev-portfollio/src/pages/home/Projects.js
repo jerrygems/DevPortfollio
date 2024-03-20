@@ -139,7 +139,7 @@ const projects = [
 ];
 
 const ProjectCard = ({ project }) => (
-  <div className="flex-shrink-0 w-70 h-60 relative m-2 bg-gray-300 rounded-lg overflow-auto hover:border-purple-500 hover:border-4 transition-all duration-200 ease-in-out">
+  <div className="w-50 h-40 sm:w-50 sm:h-30 md:w-70 md:h-60 flex-shrink-0 relative m-2 bg-gray-300 rounded-lg overflow-auto hover:border-purple-500 hover:border-4 transition-all duration-200 ease-in-out">
     <img
       src={`/images/${project.backgroundImage}`}
       alt={project.title}
@@ -173,12 +173,10 @@ const Project = () => (
       id="project"
       className=" relative flex flex-col items-center justify-center min-h-screen "
     >
-      <h2 className="absolute top-20 text-5xl font-bold text-center mb-8 ">
-        Projects
-      </h2>
-      <div className="overflow-x-auto flex gap-4 py-8 px-4 scrollbar scrollbar-thumb-blue-500 ">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+      <h2 className="top-20 text-5xl font-bold text-center mb-8 ">Projects</h2>
+      <div className="flex flex-col sm:flex-row overflow-y-auto scrollbar scrollbar-thumb-blue-500">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </div>

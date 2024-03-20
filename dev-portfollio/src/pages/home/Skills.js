@@ -33,7 +33,7 @@ const Skills = () => (
       <h2 className="text-5xl font-bold mb-8 text-center ">My Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 min-w-screen">
         {Object.entries(skills).map(([category, techs]) => (
-          <div key={category} className="bg-gray-800 rounded-lg p-6">
+          <div key={category} className="bg-gray-800 rounded-lg p-6 mx-4">
             <h3 className="text-lg font-bold mb-4 text-white">{category}</h3>
             <div className="flex flex-wrap">
               {techs.map((tech, index) => (

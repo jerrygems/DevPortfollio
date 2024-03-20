@@ -60,7 +60,7 @@ body {
   }
   
   .hire-btn,
-  .previous-works-btn {
+  .projects {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border-radius: 2rem;
@@ -80,9 +80,9 @@ body {
     color: #333;
   }
   
-  .hero-image {
+  /* .hero-image {
     position: relative;
-  }
+  } */
   
   .hero-image img {
     max-width: 100%;
@@ -98,6 +98,16 @@ body {
     top:50% ;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   } */
+  
+ 
+  .pattern { 
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22b%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%2321D4FD%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23B721FF%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M756 607.5Q715 715 607.5 791T364 819.5Q228 772 123 636t52.5-219.5q157.5-83.5 241-229t200-33Q733 267 765 383.5t-9 224Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M756 607.5Q715 715 607.5 791T364 819.5Q228 772 123 636t52.5-219.5q157.5-83.5 241-229t200-33Q733 267 765 383.5t-9 224Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  }
   
   .stat {
     text-align: center;
@@ -116,21 +126,33 @@ body {
   
   /* Responsive Styles */
   @media (max-width: 768px) {
+    .hero-section {
+      width: 100%;
+      height: auto;
+    }
     .hero-content {
       flex-direction: column;
       text-align: center;
+      
     }
-  
+    .img.hero-image{
+      max-width: 100%;
+      height: auto;
+      border-right: 100px;
+      border-bottom:200px ;
+    }
     .hero-text {
       max-width: none;
       margin-bottom: 2rem;
     }
   
     .stats {
-      position: static;
+      position: relative;
       flex-direction: column;
       align-items: center;
       padding: 2rem 1rem;
+      margin-top:0.5rem ;
+      margin-left: 0.5rem;
     }
   
     .stat {

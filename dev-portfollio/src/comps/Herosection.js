@@ -8,7 +8,7 @@ const HeroSection = () => {
       id="about"
       className="hero-section flex flex-col h-screen w-screen mt-[80px]  overflow-hidden"
     >
-      <div className="hero-content md:w-full md:w-1/2 ml-[40px]">
+      <div className="hero-content md:w-full md:w-1/2 md:ml-[40px]">
         <div className="hero-text">
           <h1 className="font-bold">I'm Anupam Kumar </h1>
           <p>
@@ -25,14 +25,51 @@ const HeroSection = () => {
               UI/UX
             </span>{" "}
             desinger.
+            <p>
+              <span>
+                {" "}
+                I'm seeking for a good opportunity in these fields to contribute
+                and gain experience{" "}
+              </span>
+            </p>
           </p>
-          <button className="hire-btn text-purple">Hire Me</button>
-          <button className="previous-works-btn">Previous Works</button>
+          <button
+            className="hire-btn transition duration-200 hover:bg-purple-500 hover:text-white"
+            onClick={() => {
+              document
+                .getElementById("contact")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Hire Me
+          </button>
+          <button
+            className="projects transition duration-200 text-gray hover:bg-gray-100 hover:text-black"
+            onClick={() => {
+              document
+                .getElementById("project")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Projects
+          </button>
         </div>
-        <div className="bg-hero-image bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full ">
-          <div className="hero-image m-4">
+
+        {/* <div className=" center blob pattern bg-hero-image mt-10 ml-[100px]">
+          <div className="hero-image m-4  ">
             <img
-              className="hero-image rounded-full w-96 h-96"
+              className="hero-image w-96 h-96 rounded-br-[200px] rounded-bl-[10px] ml-[100px] mb-20"
+              src="../../logo.png"
+              alt="Hero"
+            />
+          </div>
+        </div>
+      </div> */}
+
+        <div className=" bg-hero-image bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-t-full  rounded-br-full">
+          <div className="hero-image m-4  ">
+            <img
+              className="hero-image w-96 h-96 rounded-br-[150px] md:rounded-br-[200px]"
               src="../../logo.png"
               alt="Hero"
             />
