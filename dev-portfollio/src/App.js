@@ -13,6 +13,13 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <Screen1 />
+      <Description />
+      <Projects />
+      <Skills />
+      <Quotes />
+      <SocialLinks />
+      <Footer />
     </div>
   );
 }
